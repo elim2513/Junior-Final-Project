@@ -17,6 +17,6 @@ exports.velocity= function(ke,m){
   let v= 0;
   v+= 2*ke;
   v= v/m;
-  v= math.sqrt(v)
+  v= Math.sqrt(v)
   return v;
 }
