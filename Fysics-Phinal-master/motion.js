@@ -13,11 +13,11 @@ exports.velocity= function(d,t){
   let v= d/t;
   return v;
 };
-exports.distance2= function(d,v,t){
+exports.distance2= function(a,v,t){
   let d= 0.5*a*t*t+v*t;
   return d;
 };
-exports.velocity2= function(v,a,t){
+exports.velocity2= function(v1,a,t){
   let v2= v1+a*t;
   return v;
 }
