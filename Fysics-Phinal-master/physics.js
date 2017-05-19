@@ -1,4 +1,4 @@
-const motion = require('./motion');
+ const motion = require('./motion');
 const energy = require('./energy');
 const readline = require('readline');
 
@@ -13,11 +13,37 @@ terminal.question("What type of equation are you looking for?",function(str){
 
     str.toLowerCase();
     if(str == "motion"){
-      //do something
-        terminal.question("What variable are you lookig for?",function(myvar){
-          if(myvar =="d"){}
-          else if(myvar == "v"){}
-          else if(myvar == "a"){}
+        terminal.question("What variable are you looking for?",function(str2){
+          if(str2 =="d"){
+            printOptions();
+            terminal.question("What variable do you know?",function(str2){
+              if(str2[2] == "null"){
+                motion.distance(str2[1],str2[3])
+              }
+              else{
+                motion.distance2(str2[2],str2[3]str2[1])
+              }
+            })
+          }
+          else if(str2 == "v"){
+            printOptions();
+            terminal.question("What variable do you know?",function(str2){
+              if(str2[2] == "null"){
+                motion.velocity(str2[0],str2[3])
+              }
+              else{
+                motion.velocity2(str2[0],str2[3],str2[2])
+              }
+            })
+          }
+          else if(myvar == "a"){
+            printOptions();
+            terminal.question("What variable do you know?",function str2){
+              if(str2[2]){
+                motion.acceleration(str2[])
+              }
+            }
+          }
           else if(myvar == "t"){}
         });
 

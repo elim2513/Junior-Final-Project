@@ -29,3 +29,7 @@ exports.acceleration= function(v2,v1,t){
   let a= (v2-v1)/t;
   return a;
 }
+exports.acceleration2= function(d,v,t){
+  let a2= (2*(d-v*t)/(t*t));
+  return a2;
+}
