@@ -39,26 +39,43 @@ terminal.question("What type of equation are you looking for?",function(str){
           else if(myvar == "a"){
             printOptions();
             terminal.question("What variable do you know?",function str2){
-              if(str2[2]){
-                motion.acceleration(str2[])
+              if(str2[2] == "null"){
+                motion.acceleration2(str2[0],str2[1],str2[3])
               }
             }
           }
-          else if(myvar == "t"){}
+          else if(myvar == "t"){
+            printOptions();
+            terminal.question("What variable do you know?",function str2){
+              if(str2[3] == "null"){
+                motion.time2(str2[1],str2[3])
+              }
+            }
+          }
         });
 
     }
     else(str == "energy"){
-      //do something else
       terminal.question("What variable are you looking for?",function(myvar){
         if(myvar == "ke"){
-          //q3 in video
+          printOptions();
+          terminal.question("What variable do you know?",function myvar){
+            if(myvar[5]){
+              motion.kineticenergy(myvar[4],myvar[1])
+            }
+          }
         }
         else if(myvar == "m"){
-
+          printOptions();
+          terminal.question("What variable do you know?",function myvar){
+            if(myvar[4]){
+              motion.mass(myvar[5],myvar[1])
+            }
+          }
         }
         else if(myvar == "v"){
-
+          printOptions();
+          terminal.question("What variable do you know?")
         }
       });
     }
